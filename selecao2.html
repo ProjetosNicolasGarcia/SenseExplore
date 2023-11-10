@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2/4</title>
+    <link rel="stylesheet" href="css/selecao.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+
+    <audio autoplay>
+        <source src="audio/selecaotexto.mp3" type="audio/mp3">
+    </audio>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <h1>QUAL SOM VOCÊ OUVIU?</h1>
+            <p>Escolha a opção que mais se adequa ao que você escutou</p>
+        </div>
+        <div class="col">
+
+
+
+         
+          
+
+         
+            <audio id="caverna">
+                <source src="audio/caverna.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card5" onfocus="caverna.play()" data-resposta="errada" onmouseover="caverna.play()" onclick="window.location.href='floresta.html'" onkeydown="redirectToNeve(event)" tabindex="1">
+                <h5>Caverna</h5>
+            </div>
+            <script>
+
+                const caverna = new Audio();
+                caverna.src = "audio/caverna.mp3";
+
+                function redirectToNeve(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'floresta.html';
+                    }
+                }
+            </script>
+
+          
+            <audio id="floresta">
+                <source src="audio/floresta.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card6" onfocus="floresta.play()" data-resposta="correta" onmouseover="floresta.play()" onclick="window.location.href='floresta.html'" onkeydown="redirectToDeserto(event)" tabindex="2">
+                <h5>Floresta</h5>
+            </div>
+            <script>
+
+                const floresta = new Audio();
+                floresta.src = "audio/floresta.mp3";
+
+
+                function redirectToDeserto(event) {
+                   if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'floresta.html';
+                    }
+                }
+            </script>
+
+            <audio id="cidade">
+                <source src="audio/cidadee.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card7" onfocus="cidade.play()" data-resposta="errada" onmouseover="cidade.play()" onclick="window.location.href='floresta.html'" onkeydown="redirectToMar(event)" tabindex="3">
+                <h5>Cidade</h5>
+            </div>
+            <script>
+
+                const cidade = new Audio();
+                cidade.src = "audio/cidade.mp3";
+
+                function redirectToMar(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'floresta.html';
+                    }
+                }
+            </script>
+
+            
+            <audio id="ouvirnovamente">
+                <source src="audio/ouvirnovamente.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card8" onfocus="ouvirnovamente.play()" data-resposta="errada" onmouseover="ouvirnovamente.play()" onclick="window.location.href='video2.html'" onkeydown="redirectToHome(event)" tabindex="4">
+                <h5>Ouvir novamente</h5>
+            </div>
+            <script>
+
+                const ouvirnovamente = new Audio();
+                ouvirnovamente.src = "audio/ouvirnovamente.mp3";
+
+                function redirectToHome(event) {
+                    if  (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'video2.html';
+                    }
+                }
+            </script>
+
+
+
+        </div>
+      </div>
+    </div>
+   
+
+    
+    <footer>
+        <p>SenseExplore       2°C       2023</p>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>

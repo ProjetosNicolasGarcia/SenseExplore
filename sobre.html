@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenseExplore - Sobre</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+    
+    <audio autoplay>
+        <source src="audio/sobretexto.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="hero">
+
+        
+        <nav>
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li><a onfocus="sobre.play()" onkeypress="sobretexto.play()" href="sobre.html" class="nav-link">SOBRE O PROJETO</a></li>
+                <script type="text/javascript">
+                    const sobre = new Audio();
+                    sobre.src = "audio/sobre.mp3";
+
+                    const sobretexto = new Audio();
+                    sobretexto.src = "audio/sobretexto.mp3";
+
+                    function handleKeyDown(event) {
+                        if (event.key === 'Enter') {
+                            sobretexto.play(); // Reproduz o áudio "home"
+                            window.location.href = "sobre.html";
+                        }
+                    }
+                    
+                </script>
+
+                <li><a onfocus="comofunciona.play()" href="comofunciona.html" class="nav-link">COMO FUNCIONA</a></li>
+                <script type="text/javascript">
+                    const comofunciona = new Audio();
+                    comofunciona.src = "audio/comofunciona.mp3";
+                </script>
+                                
+              
+
+                <li><a onfocus="iniciar.play()" href="iniciar.html" class="nav-link">JOGAR</a></li>
+                <script type="text/javascript">
+                    const iniciar = new Audio();
+                    iniciar.src = "audio/iniciar.mp3";
+                </script>
+
+               
+
+                  <li><a onfocus="home.play()" href="home.html" class="nav-link">PÁGINA INICIAL</a></li>
+                <script type="text/javascript">
+                    const home = new Audio();
+                    home.src = "audio/paginainicial.mp3";
+                </script>
+                
+            </ul>
+        </nav>
+
+
+    <div class="sobrecontainer gridcontainer">
+        <div class="text-column">
+            <h1>Sobre o nosso projeto</h1>
+            <p>O projeto SenseExplore, alinhado à ODS 10 da ONU que visa a redução de desigualdades, concentra-se em oferecer soluções para a inclusão de deficientes visuais no ambiente Web. Reconhecendo a importância de enfrentar desigualdades e promover a inclusão, nosso projeto destaca os desafios enfrentados por um dos grupos mais vulneráveis, os deficientes visuais. Essa condição afeta a capacidade de enxergar, variando de visão reduzida à cegueira total, incentivando o desenvolvimento de habilidades sensoriais aprimoradas para explorar o mundo.</p>
+            <p>A partir disso, o SenseExplore oferece uma experiência imersiva por meio de um jogo de múltipla escolha em uma aplicação web totalmente planejada para o uso de deficientes visuais. Este jogo simula os desafios que os deficientes visuais enfrentam na web e no mundo, buscando promover empatia e incentivar práticas inclusivas na internet, proporcionando uma compreensão mais profunda sobre as barreiras enfrentadas e soluções para uma experiência web mais acessível a todos.</p>
+        </div>
+        <div class="image-column">
+            <img src="img/visivel.png" alt="Imagem visível para ilustrar o texto">
+        </div>
+    </div>
+
+  <footer>
+    <p>SenseExplore  -  2°C  -  2023</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3/4</title>
+    <link rel="stylesheet" href="css/selecao.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+
+    <audio autoplay>
+        <source src="audio/selecaotexto.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <h1>QUAL SOM VOCÊ OUVIU?</h1>
+            <p>Escolha a opção que mais se adequa ao que você escutou</p>
+        </div>
+        <div class="col">
+
+
+
+  
+          
+
+          
+            <audio id="neve">
+                <source src="audio/neve.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card9" onfocus="neve.play()" data-resposta="errada" onmouseover="neve.play()" onclick="window.location.href='cidade.html'" onkeydown="redirectToNeve(event)" tabindex="1">
+                <h5>Neve</h5>
+            </div>
+            <script>
+
+                const neve = new Audio();
+                neve.src = "audio/neve.mp3";
+
+                function redirectToNeve(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'cidade.html';
+                    }
+                }
+            </script>
+
+         
+            <audio id="montanha">
+                <source src="audio/montanha.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card10" onfocus="montanha.play()" data-resposta="errada" onmouseover="montanha.play()" onclick="window.location.href='cidade.html'" onkeydown="redirectToDeserto(event)" tabindex="2">
+                <h5>Montanha</h5>
+            </div>
+            <script>
+
+                const montanha = new Audio();
+                montanha.src = "audio/montanha.mp3";
+
+
+                function redirectToDeserto(event) {
+                   if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'cidade.html';
+                    }
+                }
+            </script>
+
+            <audio id="cidade">
+                <source src="audio/cidade.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card11" onfocus="cidade.play()"  data-resposta="correta" onmouseover="cidade.play()" onclick="window.location.href='cidade.html'" onkeydown="redirectToMar(event)" tabindex="3">
+                <h5>Cidade</h5>
+            </div>
+            <script>
+
+                const cidade = new Audio();
+                cidade.src = "audio/cidade.mp3";
+
+                function redirectToMar(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'cidade.html';
+                    }
+                }
+            </script>
+
+           
+            <audio id="ouvirnovamente">
+                <source src="audio/ouvirnovamente.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card12" onfocus="ouvirnovamente.play()" data-resposta="errada" onmouseover="ouvirnovamente.play()" onclick="window.location.href='video3.html'" onkeydown="redirectToHome(event)" tabindex="4">
+                <h5>Ouvir novamente</h5>
+            </div>
+            <script>
+
+                const ouvirnovamente = new Audio();
+                ouvirnovamente.src = "audio/ouvirnovamente.mp3";
+
+                function redirectToHome(event) {
+                    if  (event.keyCode === 13) { 
+                        window.location.href = 'video3.html';
+                    }
+                }
+            </script>
+
+
+
+        </div>
+      </div>
+    </div>
+   
+
+    
+    <footer>
+        <p>SenseExplore       2°C       2023</p>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>

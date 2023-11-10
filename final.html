@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenseExplore - Home</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+
+    <audio autoplay>
+        <source src="audio/finaltexto.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="hero">
+
+   <figure >
+    <img class="bgimg" src="SenseExplore/img/firewatchteste.jpg" alt="">
+   </figure>
+        
+      
+        <div class="contentfinal">
+            <h1>Obrigado pela sua participação !</h1>
+            <p>Agora você compreende melhor como os cegos utilizam a internet. Sua recompensa é:</p>
+            <figure>
+                <img class="endpage" src="img/7belo.png" alt="">
+            </figure>
+            <button onfocus="finalizar.play()"  onclick = "window.location.href='index.html';" >FINALIZAR</button>
+            <script>
+            const finalizar = new Audio();
+            finalizar.src = "audio/finalizar.mp3";
+            </script>
+          
+        </div>
+    </div>
+    <footer>
+        <p>SenseExplore       2°C       2023</p>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>

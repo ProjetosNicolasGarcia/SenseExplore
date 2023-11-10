@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenseExplore - Como funciona</title>
+  
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/28841a8114.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+
+    <audio autoplay>
+        <source src="audio/comofuncionatexto.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="hero">
+
+        
+        <nav>
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li><a onfocus="sobre.play()" onkeypress="sobretexto.play()" href="sobre.html" class="nav-link">SOBRE O PROJETO</a></li>
+                <script type="text/javascript">
+                    const sobre = new Audio();
+                    sobre.src = "audio/sobre.mp3";
+
+                    const sobretexto = new Audio();
+                    sobretexto.src = "audio/sobretexto.mp3";
+
+                    function handleKeyDown(event) {
+                        if (event.key === 'Enter') {
+                            sobretexto.play(); 
+                            window.location.href = "sobre.html";
+                        }
+                    }
+                    
+                </script>
+
+                <li><a onfocus="comofunciona.play()" href="comofunciona.html" class="nav-link">COMO FUNCIONA</a></li>
+                <script type="text/javascript">
+                    const comofunciona = new Audio();
+                    comofunciona.src = "audio/comofunciona.mp3";
+                </script>
+                                
+              
+
+                <li><a onfocus="iniciar.play()" href="iniciar.html" class="nav-link">JOGAR</a></li>
+                <script type="text/javascript">
+                    const iniciar = new Audio();
+                    iniciar.src = "audio/iniciar.mp3";
+                </script>
+
+               
+
+                  <li><a onfocus="home.play()" href="home.html" class="nav-link">PÁGINA INICIAL</a></li>
+                <script type="text/javascript">
+                    const home = new Audio();
+                    home.src = "audio/paginainicial.mp3";
+                </script>
+            </ul>
+        </nav>
+  
+ <div class="funcionacontainer">
+
+    <h1>
+        Como o SenseExplore funciona?
+    </h1>
+    <div class="grid-container">
+        <div class="icon"><img src="img/teclado.png" alt=""></div>
+        <div class="icon"><img src="img/ouvido.png" alt=""></div>
+        <div class="icon"><img src="img/verifica.png" alt=""></div>
+        <div class="text">1° Através do teclado, selecione a opção "jogar".</div>
+        <div class="text">2° Ouça atentamente ao áudio que será tocado.</div>
+        <div class="text">3° Selecione a opção que corresponde ao que você ouviu.</div>
+    </div>
+    
+</body>
+</html>

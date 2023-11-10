@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1/4</title>
+    <link rel="stylesheet" href="css/selecao.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+
+    <audio autoplay>
+        <source src="audio/selecaotexto.mp3" type="audio/mp3">
+    </audio>
+
+   
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <h1>QUAL SOM VOCÊ OUVIU?</h1>
+            <p>Escolha a opção que mais se adequa ao que você escutou</p>
+        </div>
+        <div class="col">
+
+
+
+        
+
+         
+
+            <audio id="neve">
+                <source src="audio/neve.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card2" onfocus="neve.play()" data-resposta="errada" onmouseover="neve.play()" onclick="window.location.href='mar.html'" onkeydown="redirectToNeve(event)" tabindex="1">
+                <h5>Neve</h5>
+               
+            </div>
+            <script>
+
+                const neve = new Audio();
+                neve.src = "audio/neve.mp3";
+
+                function redirectToNeve(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'mar.html';
+                    }
+                }
+            </script>
+
+          
+            <audio id="deserto">
+                <source src="audio/deserto.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card3" onfocus="deserto.play()" data-resposta="errada" onmouseover="deserto.play()" onclick="window.location.href='mar.html'" onkeydown="redirectToDeserto(event)" tabindex="2">
+                <h5>Deserto</h5>
+                
+            </div>
+            <script>
+
+                const deserto = new Audio();
+                deserto.src = "audio/deserto.mp3";
+
+
+                function redirectToDeserto(event) {
+                   if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'mar.html';
+                    }
+                }
+            </script>
+
+            <audio id="mar">
+                <source src="audio/mar.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card1" onfocus="mar.play()" data-resposta="correta" onmouseover="mar.play()" onclick="window.location.href='mar.html'" onkeydown="redirectToMar(event)" tabindex="3">
+                <h5>Mar</h5>
+                
+            </div>
+            <script>
+
+                const mar = new Audio();
+                mar.src = "audio/Mar.mp3";
+
+                function redirectToMar(event) {
+                    if (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'mar.html';
+                    }
+                }
+            </script>
+
+           
+            <audio id="ouvirnovamente">
+                <source src="audio/ouvirnovamente.mp3" type="audio/mpeg">
+            </audio>
+            <div class="card card4" onfocus="ouvirnovamente.play()" data-resposta="errada" onmouseover="ouvirnovamente.play()" onclick = "window.location.href='video.html';" onkeydown="redirectToHome(event)" tabindex="4">
+                <h5>Ouvir novamente</h5>
+               
+            </div>
+            <script>
+
+                const ouvirnovamente = new Audio();
+                ouvirnovamente.src = "audio/ouvirnovamente.mp3";
+
+                function redirectToHome(event) {
+                    if  (event.keyCode === 13) { // Tecla Enter
+                        window.location.href = 'video.html';
+                    }
+                }
+            </script>
+
+
+
+           
+        </div>
+      </div>
+    </div>
+   
+
+    
+    <footer>
+        <p>SenseExplore       2°C       2023</p>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>
