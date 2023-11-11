@@ -7,7 +7,7 @@
     <title>SenseExplore - Sobre</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+ 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   
 </head>
@@ -65,20 +65,102 @@
             </ul>
         </nav>
 
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="img/1.png" alt="">
+                <div class="info">
+                    <h2>Sobre o projeto</h2>
+                    <p>O SenseExplore oferece uma experiência imersiva por meio de um jogo de múltipla escolha em uma aplicação web totalmente planejada para o uso de deficientes visuais. Este jogo simula os desafios que os deficientes visuais enfrentam na web e no mundo, buscando promover empatia e incentivar práticas inclusivas na internet, proporcionando uma compreensão mais profunda sobre as barreiras enfrentadas e soluções para uma experiência web mais acessível a todos.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/2.png" alt="">
+                <div class="info">
+                    <h2>O que são deficientes visuais?</h2>
+                    <p>A deficiência visual é caracterizada pela perda ou redução permanente da capacidade visual em ambos os olhos, sem possibilidade de correção por meio de lentes, tratamentos clínicos ou cirúrgicos. Ela é dívidida em dois grupos principais: Baixa visão, onde a perda é leve ou moderada, provocando diminuição das respostas visuais mesmo com tratamentos. E cegueira, onde há ausência total de resposta visual, se fazendo necessário o uso do sistema Braile para ler e de bengalas para se locomover.
+                        
+                        </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/3.png" alt="">
+                <div class="info">
+                    <h2>Como eles utilizam a internet?</h2>
+                    <p>Para acessar a web através de dispositivos desktop, os deficientes visuais, utilizam técnologias assistivas que tornam a navegação online possível, umas das principais ferramentas para isso, são os Softwares de leitura de tela, que convertem o texto exibido em áudio, alguns exemplos são o NVDA, software que lê textos através de comandos no teclado e o DosVox, sistema operacional da UFRJ que possui um navegador próprio adaptado para receber comandos de teclado. Além disso, existem outras alternativas, como teclados adaptados com braile e tecnologias de comando por voz, para a utilização em dispositivos mobile.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/4.png" alt="">
+                <div class="info">
+                    <h2>Quem são os integrantes</h2>
+                    <p>As pessoas responsáveis por esse projeto, são os alunos do 2° ano C do curso de informática para internet da ETEC MCM, eles são:</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+       
+        <script type="text/javascript">
+            var slides = document.querySelectorAll('.slide');
+            var btns = document.querySelectorAll('.btn');
+            let currentSlide = 1;
 
-    <div class="sobrecontainer gridcontainer">
-        <div class="text-column">
-            <h1>Sobre o nosso projeto</h1>
-            <p>O projeto SenseExplore, alinhado à ODS 10 da ONU que visa a redução de desigualdades, concentra-se em oferecer soluções para a inclusão de deficientes visuais no ambiente Web. Reconhecendo a importância de enfrentar desigualdades e promover a inclusão, nosso projeto destaca os desafios enfrentados por um dos grupos mais vulneráveis, os deficientes visuais. Essa condição afeta a capacidade de enxergar, variando de visão reduzida à cegueira total, incentivando o desenvolvimento de habilidades sensoriais aprimoradas para explorar o mundo.</p>
-            <p>A partir disso, o SenseExplore oferece uma experiência imersiva por meio de um jogo de múltipla escolha em uma aplicação web totalmente planejada para o uso de deficientes visuais. Este jogo simula os desafios que os deficientes visuais enfrentam na web e no mundo, buscando promover empatia e incentivar práticas inclusivas na internet, proporcionando uma compreensão mais profunda sobre as barreiras enfrentadas e soluções para uma experiência web mais acessível a todos.</p>
-        </div>
-        <div class="image-column">
-            <img src="img/visivel.png" alt="Imagem visível para ilustrar o texto">
-        </div>
-    </div>
+            var manualNav = function(manual){
+                 slides.forEach((slide) => {
+                    slide.classList.remove('active');
+
+                    btns.forEach((btn) => {
+                        btn.classList.remove('active'); 
+                    });
+                 });
+
+                slides[manual].classList.add('active');
+                btns[manual].classList.add('active');
+            }
+
+            btns.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    manualNav(i);
+                    currentSlide = i;
+                });
+            });
+
+            var repeat = function(activeClass){
+                let active = document.getElementsByClassName('active');
+                let i = 1;
+
+                var repeater = () => {
+                    setTimeout(function(){
+                        [...active].forEach((activeSlide) => {
+                            activeSlide.classList.remove('active')
+                        });
+
+
+                        slides[i].classList.add('active');
+                        btns[i].classList.add('active');
+                        i++;
+
+                        if(slides.length == i){
+                            i = 0;
+                        }
+                        if(i >= slides.length){
+                            return;
+                        }
+                        repeater();
+                        }, 32000);
+                    }
+                    repeater();
+                }
+                repeat();
+                
+        </script>
 
   <footer>
-    <p>SenseExplore  -  2°C  -  2023</p>
+    <p>© SenseExplore 2023</p>
 </footer>
 
 </body>

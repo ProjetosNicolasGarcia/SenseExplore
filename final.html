@@ -31,16 +31,24 @@
             <figure>
                 <img class="endpage" src="img/7belo.png" alt="">
             </figure>
+            <button onfocus="saibamais.play()" onclick="window.location.href = 'https://www.desenvolvimentosocial.pr.gov.br/Pagina/Deficiencia-Visual#:~:text=' + encodeURIComponent('A deficiência visual é a perda ou redução da capacidade visual em ambos os olhos em caráter definitivo, que não pode ser melhorada ou corrigida com o uso de lentes, tratamento clínico ou cirúrgico. Existem critérios rígidos para definir uma deficiência.');">SAIBA MAIS</button>
+                <script>
+                    const saibamais = new Audio();
+                    saibamais.src = "audio/saibamais.mp3";
+                </script>
+
             <button onfocus="finalizar.play()"  onclick = "window.location.href='index.html';" >FINALIZAR</button>
             <script>
             const finalizar = new Audio();
             finalizar.src = "audio/finalizar.mp3";
             </script>
+            
           
         </div>
     </div>
+    
     <footer>
-        <p>SenseExplore       2°C       2023</p>
+        <p>© SenseExplore 2023</p>
     </footer>
  
     <script src="js/script.js"></script>
